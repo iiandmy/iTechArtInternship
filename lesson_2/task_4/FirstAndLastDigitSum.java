@@ -10,8 +10,6 @@ public class FirstAndLastDigitSum {
 		while (number / digit > 10)
 			digit *= 10;
 
-		// 100000000
-		// 12.3456789
 		int firstDigit = number / digit;
 		int lastDigit = number % 10;
 
