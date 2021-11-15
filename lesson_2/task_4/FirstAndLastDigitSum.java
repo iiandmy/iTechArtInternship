@@ -1,7 +1,7 @@
 /*
 	Find sum of first and last digit of number
 in  : 1234
-	  ^  ^
+      ^  ^
 out : 1 + 4 = 5
 */
 
