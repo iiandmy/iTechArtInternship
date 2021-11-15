@@ -1,3 +1,9 @@
+/*
+	Convert number digits to String
+in	: 123768
+out	: ONE TWO THREE SEVEN SIX EIGHT
+*/
+
 public class NumberToWords {
 	public static String convert(int number) {
 		if (number < 0)
