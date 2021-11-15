@@ -1,5 +1,5 @@
 public class Main {
 	public static void main(String[] args) {
-		System.out.println(PerfectNumber.isPerfect(6));
+		System.out.println(FlourPackProblem.canPack(2, 0, 10));
 	}
 }
