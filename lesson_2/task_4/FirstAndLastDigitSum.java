@@ -1,3 +1,10 @@
+/*
+	Find sum of first and last digit of number
+in  : 1234
+	  ^  ^
+out : 1 + 4 = 5
+*/
+
 public class FirstAndLastDigitSum {
 	public static int calcSum(int number) {
 		if (number < 0) 
