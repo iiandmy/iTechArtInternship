@@ -1,7 +1,7 @@
 /*
 	Return true if at least two numbers in array have two common last digits
 in	: 123, 124, 126, 127, 129, 213
-		^						 ^
+	    ^			     ^
 out	: true
 */
 
