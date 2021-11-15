@@ -1,3 +1,10 @@
+/*
+	Find sum of even digits of number
+in	: 123456
+	   ^ ^ ^
+out	: 2 + 4 + 6 = 12
+*/
+
 public class EvenDigits {
 	public static int calcSum(int number) {
 		if (number < 0)

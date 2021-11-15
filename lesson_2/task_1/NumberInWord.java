@@ -1,3 +1,8 @@
+/*
+	Convert int number into word
+	If input number < 0 or > 9 return OTHER
+*/
+
 public class NumberInWord {
 	public static String convert(int number) {
 		switch (number) {

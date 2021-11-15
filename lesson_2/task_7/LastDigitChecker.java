@@ -1,3 +1,10 @@
+/*
+	Return true if at least two numbers in array have two common last digits
+in	: 123, 124, 126, 127, 129, 213
+		^						 ^
+out	: true
+*/
+
 public class LastDigitChecker {
 	public static boolean hasSameLastDigit(int[] numbers) {
 		for (int i = 0; i < numbers.length; i++) {

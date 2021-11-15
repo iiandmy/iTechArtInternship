@@ -1,3 +1,7 @@
+/*
+	Find greatest common divisor
+*/
+
 public class GreatestCommonDivisor {
 	public static int getGCD(int a, int b) {
 		if (a < 10 || b < 10)

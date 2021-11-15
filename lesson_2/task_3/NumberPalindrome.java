@@ -1,3 +1,7 @@
+/*
+	Determine, is input number a palindrome or not
+*/
+
 public class NumberPalindrome {
 	public static boolean isPalindrome(int number) {
 		char[] numberStr = Integer.toString(number).toCharArray();

@@ -1,3 +1,7 @@
+/*
+	Calculate days count in month, according year is leap or not
+*/
+
 public class NumberOfDaysInMonth {
 	private final static int FEB = 1;
 	public static int calcNumber(int year, int month) {
