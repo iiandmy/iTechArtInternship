@@ -14,11 +14,7 @@ public class PerfectNumber {
 		if (number < 1)
 			return false;
 
-		Integer[] factors = findFactors(number);
-		int factorsSum = 0;
-		for (Integer f : factors) {
-			factorsSum += f;
-		}
+		int factorsSum = findFactorsSum(number);
 
 		if (factorsSum == number)
 			return true;
@@ -26,18 +22,15 @@ public class PerfectNumber {
 		return false;
 	}
 
-	private static Integer[] findFactors(int number) {
+	private static int findFactorsSum(int number) {
 		if (number < 0)
-			return null;
+			return -1;
 
-		List<Integer> divisors = new ArrayList<>();
+		int resultSum = 0;
 		for (int i = 1; i < number; i++) 
 			if (number % i == 0)
-				divisors.add(i);
+				resultSum += i;
 
-		Integer[] result = new Integer[divisors.size()];
-		result = divisors.toArray(result);
-
-		return result;
+		return resultSum;
 	}
 }
