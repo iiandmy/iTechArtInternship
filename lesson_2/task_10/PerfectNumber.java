@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /*
 	Determine is input number perfect or not
 	Perfect number - a number where sum of it's factors equals this number
