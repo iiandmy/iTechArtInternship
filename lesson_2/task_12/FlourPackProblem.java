@@ -6,16 +6,21 @@
 */
 
 public class FlourPackProblem {
+	private static final int bigPackWeight = 5;
+	private static final int smallPackWeight = 2;
+
 	public static boolean canPack(int bigAmount, int smallAmount, int goalWeight) {
 		if (bigAmount < 0 || smallAmount < 0 || goalWeight < 0)
 			return false;
 
-		if (bigAmount * 5 > goalWeight)
-			return false;
-
-		int weight = bigAmount * 5 + smallAmount;
-		if (weight >= goalWeight)
-			return true;
+		for (int bigPackAmount = 1; bigPackAmount <= bigAmount; bigPackAmount++) {
+			int weight = bigPackAmount * bigPackWeight;
+			while (weight < goalWeight) {
+				weight += smallAmount * smallPackWeight;
+			}
+			if (weight == goalWeight)
+				return true;
+		}
 
 		return false;
 	}
