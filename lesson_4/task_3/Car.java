@@ -1,12 +1,14 @@
 public class Car {
-	private boolean engine = true;
-	private int wheels = 4;
+	private boolean engine;
+	private int wheels;
 	private String name;
 	private int cylinders = 4;
 
 	public Car(String name, int cylinders) {
 		this.name = name;
 		this.cylinders = cylinders;
+		this.engine = true;
+		this.wheels = 4;
 	}
 
 	public String startEngine() { return "Car engine started."; }

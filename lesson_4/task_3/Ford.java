@@ -1,20 +1,20 @@
 public class Ford extends Car {
 	public Ford(String name, int cylinders) {
-		super(name, cylinders);
+		super("Ford " + name, cylinders);
 	}
 
 	@Override
 	public String accelerate() {
-		return "Ford " + this.getName() + " started ride.";
+		return this.getName() + " started ride.";
 	}
 
 	@Override
 	public String startEngine() {
-		return "Ford " + this.getName() + " started engine.";
+		return this.getName() + " started engine.";
 	}
 
 	@Override
 	public String brake() {
-		return "Ford " + this.getName() + " stopped.";
+		return this.getName() + " stopped.";
 	}
 }
