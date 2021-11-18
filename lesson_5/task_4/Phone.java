@@ -6,7 +6,7 @@ public class Phone {
 
 	public Phone(String number) {
 		this.number = number;
-		this.contacts = new ArrayList<Contact>();
+		this.contacts = new ArrayList<>();
 	}
 
 	public boolean addContact(Contact contact) {

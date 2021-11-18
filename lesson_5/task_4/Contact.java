@@ -7,10 +7,6 @@ public class Contact {
 		this.number = number;
 	}
 
-	public boolean equals(Contact c) {
-		return this.getNumber() == c.getNumber();
-	}
-
 	public String getName() { return this.name; }
 	public String getNumber() { return this.number; }
 
