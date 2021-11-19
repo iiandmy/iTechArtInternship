@@ -15,13 +15,18 @@ public class Node extends ListItem {
     }
 
     @Override
-    ListItem previous() {
+    ListItem getPrevious() {
         return this.leftLink;
     }
 
     @Override
+    ListItem setPrevious(ListItem item) {
+        return this.leftLink = item;
+    }
+
+    @Override
     int compareTo(ListItem item) {
-        return item == null ? -1 : (((String) super.getValue()).compareTo((String)item.getValue()));
+        return item == null ? -1 : (((String) this.getValue()).compareTo((String) item.getValue()));
     }
     
 }

@@ -5,11 +5,14 @@ public abstract class ListItem {
 
     public ListItem(Object value) { 
         this.value = value;
+        this.leftLink = null;
+        this.rightLink = null;
     }
 
     abstract ListItem getNext();
     abstract ListItem setNext(ListItem item);
-    abstract ListItem previous();
+    abstract ListItem getPrevious();
+    abstract ListItem setPrevious(ListItem item);
     abstract int compareTo(ListItem item);
 
     public Object getValue() { return this.value; }
