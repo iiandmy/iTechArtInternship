@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Album {
-    private String name;
-    private String artist;
-    private SongList songs;
+    private final String name;
+    private final String artist;
+    private final SongList songs;
 
     public Album(String name, String artist) {
         this.name = name;
@@ -32,8 +32,16 @@ public class Album {
         return playlist.add(this.findSong(numberOfSong));
     }
 
-    public boolean addToPlayList(String title, LinkedList<Song> playlist) {
-        return playlist.add(this.findSong(title));
+    public void addToPlayList(String title, LinkedList<Song> playlist) {
+        playlist.add(this.findSong(title));
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getArtist() {
+        return artist;
     }
 
     private class SongList {
