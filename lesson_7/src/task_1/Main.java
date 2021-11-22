@@ -12,24 +12,33 @@ public class Main {
 
     private static void runGame(AdventureGame game) {
 
-        game.printCurrentStep();
         Scanner in = new Scanner(System.in);
         Map<String, String> commands = initCommands();
 
         while (true) {
+            game.printCurrentStep();
             String command = in.nextLine();
             if (command.equals("Q"))
                 break;
 
-
+            command = encryptCommand(command);
+            game.move(command);
         }
         in.close();
     }
 
-    private static String encryptCommand(String command, Map<String, String> commands) {
+    private static String encryptCommand(String command) {
         for (String s : command.toUpperCase().split(" ")) {
-
+            if (s.matches("E(AST)?"))
+                return "E";
+            else if (s.matches("W(EST)?"))
+                return "W";
+            else if (s.matches("N(ORTH)?"))
+                return "N";
+            else if (s.matches("S(OUTH)?"))
+                return "S";
         }
+        return "ERROR";
     }
 
     private static HashMap<String, String> initCommands() {
