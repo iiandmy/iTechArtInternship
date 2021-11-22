@@ -13,7 +13,6 @@ public class Main {
     private static void runGame(AdventureGame game) {
 
         Scanner in = new Scanner(System.in);
-        Map<String, String> commands = initCommands();
 
         while (true) {
             game.printCurrentStep();
@@ -39,15 +38,6 @@ public class Main {
                 return "S";
         }
         return "ERROR";
-    }
-
-    private static HashMap<String, String> initCommands() {
-        return new HashMap<>() {{
-            put("W", "WEST");
-            put("E", "EAST");
-            put("N", "NORTH");
-            put("S", "SOUTH");
-        }};
     }
 
     private static ArrayList<Location> initLocations() {
