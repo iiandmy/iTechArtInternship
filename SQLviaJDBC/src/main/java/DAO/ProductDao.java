@@ -9,34 +9,38 @@ import java.util.List;
 
 public class ProductDao {
 
-    public static final String MYSQL_SELECT_ALL_PRODUCTS = "SELECT * FROM products";
-    public static final String MYSQL_SELECT_BY_PRODUCT_ID = "SELECT * FROM products WHERE id=?";
+    public static final String SELECT_ALL_PRODUCTS = "SELECT * FROM products";
+    public static final String SELECT_BY_PRODUCT_ID = "SELECT * FROM products WHERE id=?";
 
     public static Product get(int id) {
-        Product product = new Product(-1, "No match found", -1);
+        return id > 0 ? getProductByID(id) : new Product();
+    }
+
+    private static Product getProductByID(int id) {
         try (Connection connection = ConnectionManager.open();
-             PreparedStatement statement = connection.prepareStatement(MYSQL_SELECT_BY_PRODUCT_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SELECT_BY_PRODUCT_ID)) {
             statement.setInt(1, id);
-            ResultSet rs = statement.executeQuery();
-            if (rs.next()) {
-                String name = rs.getString("ProductName");
-                int price = rs.getInt("Price");
-                int ident = rs.getInt("Id");
-                product = new Product(ident, name, price);
-            }
+            ResultSet result = statement.executeQuery();
+            return result.next() ? getFromResult(result) : new Product();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return product;
+    }
+
+    private static Product getFromResult(ResultSet rs) throws SQLException {
+        return new Product(rs.getInt("Id"),
+                rs.getString("ProductName"),
+                rs.getInt("Price")
+        );
     }
 
     public static List<Product> getAll() {
         List<Product> allProducts = new ArrayList<>();
         try (Connection connection = ConnectionManager.open();
-            PreparedStatement statement = connection.prepareStatement(MYSQL_SELECT_ALL_PRODUCTS)) {
-            ResultSet rs = statement.executeQuery();
-            while (rs.next()) {
-                allProducts.add(new Product(rs.getInt("Id"), rs.getString("ProductName"), rs.getInt("Price")));
+            PreparedStatement statement = connection.prepareStatement(SELECT_ALL_PRODUCTS)) {
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                allProducts.add(getFromResult(result));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
