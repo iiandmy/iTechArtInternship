@@ -7,12 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SQLviaHibernate" />
+        <module name="SQLviaSpringDataJPA" />
         <module name="SQLviaJDBC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SQLviaHibernate" target="11" />
       <module name="SQLviaJDBC" target="11" />
+      <module name="SQLviaSpring" target="1.5" />
+      <module name="SQLviaSpringDataJPA" target="11" />
+      <module name="wrapper" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SQLviaSpringDataJPA" options="-parameters" />
+    </option>
   </component>
 </project>

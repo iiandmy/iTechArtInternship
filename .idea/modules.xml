@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SQLviaHibernate/SQLviaHibernate.iml" filepath="$PROJECT_DIR$/SQLviaHibernate/SQLviaHibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/SQLviaJDBC/SQLviaJDBC.iml" filepath="$PROJECT_DIR$/SQLviaJDBC/SQLviaJDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SQLviaSpringDataJPA/SQLviaSpringDataJPA.iml" filepath="$PROJECT_DIR$/SQLviaSpringDataJPA/SQLviaSpringDataJPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/iTechArtInternship.iml" filepath="$PROJECT_DIR$/.idea/iTechArtInternship.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_1/lesson_1.iml" filepath="$PROJECT_DIR$/lesson_1/lesson_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_2/lesson_2.iml" filepath="$PROJECT_DIR$/lesson_2/lesson_2.iml" />

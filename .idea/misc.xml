@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/SQLviaJDBC/pom.xml" />
         <option value="$PROJECT_DIR$/SQLviaHibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/SQLviaSpring/pom.xml" />
+        <option value="$PROJECT_DIR$/SQLviaSpringDataJPA/pom.xml" />
       </list>
     </option>
   </component>
